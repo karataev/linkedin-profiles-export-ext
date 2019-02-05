@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn search export",
+  "version": "0.0.1",
+  "description": "LinkedIn search export",
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/search/results/people/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
